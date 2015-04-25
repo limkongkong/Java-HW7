@@ -1,0 +1,28 @@
+package System.out;
+import java.util.Scanner;
+
+public class chap3_27 {
+	
+	public static void main(String[] args) {
+		 
+		Scanner input = new Scanner(System.in);
+ 
+		 System.out.print("Enter a point's x- and y-coordinates:");
+		 double x = input.nextDouble();
+		 double y = input.nextDouble();
+		  
+		 double slope = (0 - 100) /(200 - 0);
+		 double b = 100 + slope * 0;
+		 
+		 double y1 = slope * x + b;
+	
+		 if(y <= y1
+		 && x <= 200) {
+		  System.out.print("The point is in the triangle.");}
+		 
+		 else {
+		 System.out.print("The point is not in the triangle.");}
+		
+	}
+	
+}
