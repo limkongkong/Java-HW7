@@ -1,0 +1,40 @@
+package System.out;
+import java.util.Scanner;
+
+public class chap3_28 {
+	
+	public static void main(String[] args) {
+		
+		 Scanner input = new Scanner(System.in);
+		  
+		 System.out.print("Enter r1's center x-, y-coordinates, width, and height:");
+		 double x1 = input.nextDouble();
+		 double y1 = input.nextDouble();
+		 double w1 = input.nextDouble();
+		 double h1 = input.nextDouble();
+		  
+		 System.out.print("Enter r2's center x-, y-coordinates, width, and height:");
+		 double x2 = input.nextDouble();
+		 double y2 = input.nextDouble();
+		 double w2 = input.nextDouble();
+		 double h2 = input.nextDouble();
+		  
+		 double dist1 = Math.pow(Math.pow(x2 - x1, 2), 0.5);
+		 double dist2 = Math.pow(Math.pow(y2 - y1, 2), 0.5);
+		  
+		 double distW = (w1/2) + (w2/2);
+		 double distH = (h1/2) + (h2/2);
+		  
+		 if(dist1 > distW 
+		 || dist2 > distH) {
+		  System.out.print("r2 does not overlap r1.");}
+		 
+		  else if(dist1 < w1 && dist2 < h1 && distW < w1 && distH < h1) {
+		  System.out.print("r2 is inside r1.");	} 
+
+		  else {
+		  System.out.print("r2 overlaps r1.");}
+		
+	}
+	
+}
