@@ -1,0 +1,32 @@
+package System.out;
+import java.util.Scanner;
+
+
+public class chap3_30 {
+	
+	public static void main (String [] args){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter the exchange rate from dollars to RMB:");
+		double rate = input.nextDouble();
+		System.out.println("Enter 0 to convert dollars to RMB and 1 vice versa:");
+		int convert = input.nextInt();
+		System.out.println("Enter the dollar amount:");
+		double amount = input.nextDouble();
+		
+		
+		if (convert==0){
+			double Yuan = amount * rate;
+			System.out.println("$" + amount + " is " + Yuan + " yuan" );}
+		
+		else if (convert==1){
+			double dollar = amount / rate;
+			System.out.println("$" + amount + " is " + dollar + " dollar" );}
+		
+		else {
+			System.out.println("The program fails to run" );}
+		
+	}
+
+}
