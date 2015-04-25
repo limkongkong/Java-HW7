@@ -1,0 +1,46 @@
+
+/*(Game: pick a card) Write a program that simulates picking a card from a deck of
+52 cards. Your program should display the rank (Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+Jack, Queen, King) and suit (Clubs, Diamonds, Hearts, Spades) of the card
+Here is a sample run of the program:*/
+
+
+package System.out;
+import java.util.Random;
+
+public class chap3_24 {
+	
+	public static void main (String[] args){
+		
+		String[] Card ;
+		Card = new String[13];
+		Card[0]="Ace";
+		Card[1]="2";
+		Card[2]="3";
+		Card[3]="4";
+		Card[4]="5";
+		Card[5]="6";
+		Card[6]="7";
+		Card[7]="8";
+		Card[8]="9";
+		Card[9]="10";
+		Card[10]="Jack";
+		Card[11]="Queen";
+		Card[12]="King";
+		
+		String[] Suit ;
+		Suit = new String[4];
+		Suit[0]="Clubs";
+		Suit[1]="Diamonds";
+		Suit[2]="Hearts";
+		Suit[3]="Spades";
+		
+		Random randomGenerator = new Random();
+		int S = randomGenerator.nextInt(4);
+		int C = randomGenerator.nextInt(13);
+		
+		System.out.println("The card you picked is " + Card[C] + " of "  + Suit[S] );
+		
+	}
+
+}
